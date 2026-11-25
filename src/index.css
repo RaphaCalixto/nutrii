@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  /* Paleta Editorial Tons de Verde Claro & Sálvia Botânica */
+  --verda-canvas: #F6FAF7;
+  --verda-mist: #EAF4EE;
+  --verda-celadon: #DFF0E5;
+  --verda-mint-frost: #D5ECDD;
+  --verda-forest: #163828;
+  --verda-pine: #1E4935;
+  --verda-emerald: #1F7A53;
+  --verda-leaf-bright: #2A9266;
+  --verda-mint-glow: #8FE3B4;
+  --verda-ink: #133123;
+  --verda-ink-soft: #466959;
+  --verda-ink-light: #F6FAF7;
+  --verda-ink-light-soft: #C2E2CF;
+
+  /* Tipografia Editorial */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Curvas orgânicas */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background-color: var(--verda-canvas);
+  color: var(--verda-ink);
+  font-family: var(--font-sans);
+  scroll-behavior: auto;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background-color: var(--verda-canvas);
+  color: var(--verda-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+}
+
+/* Formatos Arquitetônicos Distintos de Cards (Estrutura Idêntica) */
+.card-arch {
+  border-radius: 999px 999px 24px 24px;
+}
+
+.card-chamfer {
+  clip-path: polygon(
+    0 28px,
+    28px 0,
+    100% 0,
+    100% calc(100% - 28px),
+    calc(100% - 28px) 100%,
+    0 100%
+  );
+}
+
+.card-leaf {
+  border-radius: 8px 64px 8px 64px;
+}
+
+.card-pill-ticket {
+  border-radius: 40px 12px 40px 12px;
+}
+
+.card-capsule-cut {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 44px) 0,
+    100% 44px,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* Máscaras e scrims localizados leves */
+.scrim-lead-corner {
+  background: radial-gradient(
+    ellipse 85% 75% at 15% 85%,
+    rgba(234, 244, 238, 0.72) 0%,
+    rgba(234, 244, 238, 0.28) 45%,
+    rgba(234, 244, 238, 0) 80%
+  );
+}
+
+.scrim-bottom-band {
+  background: linear-gradient(
+    to top,
+    rgba(19, 49, 35, 0.82) 0%,
+    rgba(19, 49, 35, 0.34) 44%,
+    rgba(19, 49, 35, 0) 100%
+  );
+}
+
+/* Grid técnico sutil de fundo em verde sálvia */
+.bg-blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(31, 122, 83, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 122, 83, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-blueprint-grid-sage {
+  background-image:
+    linear-gradient(to right, rgba(31, 122, 83, 0.085) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 122, 83, 0.085) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Sombras em camadas leves */
+.shadow-verda {
+  box-shadow:
+    0 6px 14px -3px rgba(19, 49, 35, 0.05),
+    0 18px 34px -8px rgba(31, 122, 83, 0.09),
+    0 32px 56px -12px rgba(42, 146, 102, 0.06);
+}
+
+.shadow-verda-deep {
+  box-shadow:
+    0 12px 28px -6px rgba(14, 38, 27, 0.22),
+    0 28px 60px -12px rgba(14, 38, 27, 0.32);
+}
+
+/* Scrollbar refinada em verde claro */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EAF4EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7BB99A;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1F7A53;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

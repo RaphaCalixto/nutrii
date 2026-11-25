@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+
+# Environment & Secrets (Mandatory Security Rule)
+.env
+.env*.local
+.env.production
+*.pem
+*.key
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
